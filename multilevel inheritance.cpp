@@ -27,7 +27,7 @@ class student
 class exam : public student
 {
 	public:
-	int m1, m2 , m3, m4, m5;	
+	int m1, m2 , m3, m4, m5,m6;	
 	void getdata()
 	{
 		cout<<"Enter your marks of subject 1: "<<endl;
@@ -40,6 +40,8 @@ class exam : public student
 		cin>>m4;
 		cout<<"Enter your marks of subject 5: "<<endl;
 		cin>>m5;
+		cout<<"Enter your marks of subject 6: "<<endl;
+		cin>>m6;
 	}
 	void display()
 	{	
@@ -48,6 +50,7 @@ class exam : public student
 		cout<<"Marks for Subject 3 is: "<<m3<<endl;
 		cout<<"Marks for Subject 4 is: "<<m4<<endl;
 		cout<<"Marks for Subject 5 is: "<<m5<<endl;
+		cout<<"Marks for Subject 6 is: "<<m6<<endl;
 	}
 };
 
@@ -57,8 +60,8 @@ class result : public exam
 	
 	void display()
 	{
-		int avg=(m1+m2+m3+m4+m5)/5;
-		cout<<"Average marks of student in 5 subjects:"<<avg<<endl;
+		int total=m1+m2+m3+m4+m5+m6;
+		cout<<"Total marks of student in 5 subjects:"<<total<<endl;
 	}
 };
 
